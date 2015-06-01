@@ -1,6 +1,6 @@
 = Spreadsheet To Database via POI and JPA
 
-This is a rough outline of a quick hack to read a spreadsheet using Apache POI
+This is a rough outline of a quick hack to convert / import / read a spreadsheet using Apache POI
 and write it into a database using the Java Persistence Architecture (JPA).
 
 There is a lot of code that is specific to our particular spreadsheet and database.
