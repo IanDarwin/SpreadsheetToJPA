@@ -1,0 +1,29 @@
+<!-- COPY this file to persistence.xml, and make changes to the copy -->
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+    	http://www.oracle.com/webfolder/technetwork/jsc/xml/ns/persistence/persistence_2_1.xsd"
+    version="2.1">
+
+<persistence-unit name="ucfn">
+	
+	<provider>org.hibernate.ejb.HibernatePersistence</provider>
+	<class>model.Member</class>
+	<class>model.Renewal</class>
+	<exclude-unlisted-classes>false</exclude-unlisted-classes>
+	<properties>
+
+		<!-- Properties for PostgreSQL (database must be created) -->
+		<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+		<property name="javax.persistence.jdbc.url" value="jdbc:postgresql:YOUR_DB_NAME"/>
+		<property name="javax.persistence.jdbc.user" value="YOUR_DB_USERNAME"/>
+		<property name="javax.persistence.jdbc.password" value="YOUR_DB_PASSWORD"/>
+		<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+
+		<!-- Properties for Hibernate provider -->
+		<property name="hibernate.hbm2ddl.auto" value="update"/>
+		<property name="hibernate.show_sql" value="false"/>
+
+	</properties>
+</persistence-unit>
+</persistence>
