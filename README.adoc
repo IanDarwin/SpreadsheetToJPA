@@ -1,9 +1,11 @@
-= Spreadsheet To JPA Entity
+= Spreadsheet To Database via POI and JPA
 
-This project reads a spreadsheet using Apache POI and writes it into a database using the
-Java Persistence Architecture (JPA).
+This is a rough outline of a project to read a spreadsheet using Apache POI
+and write it into a database using the Java Persistence Architecture (JPA).
 
 There is a lot of code that is specific to our particular spreadsheet.
+
+The persistence.xml file is omitted as it contains my database password and other info.
 
 As well, the JPA entity class isn't included as it's in a dependant project, but
 the Member class is pretty obvious, and you probably already have one like it if
