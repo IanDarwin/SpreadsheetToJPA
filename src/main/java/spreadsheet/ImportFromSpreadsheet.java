@@ -13,6 +13,7 @@ import model.Member;
 import model.MemberType;
 import model.NewsletterMode;
 
+import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.apache.poi.xssf.usermodel.XSSFRow;
@@ -116,6 +117,17 @@ public class ImportFromSpreadsheet {
 		final String email = row.getCell(12).getStringCellValue();
 		member.setEmail(email);
 		System.out.println(member);
+		final XSSFCell yearJoinedCell = row.getCell(15);
+		if (yearJoinedCell != null) {
+			try {
+				int year = (int)yearJoinedCell.getNumericCellValue();
+				member.setYearJoined(year);
+			} catch (Exception nfe) {
+				System.err.println("Warning: member " + member + ": bad yearJoined: " + yearJoinedCell);
+			}
+		}
+
+		// Now save the Entity
 		entityManager = entityMgrFactory.createEntityManager();
 		tx = entityManager.getTransaction();
 		tx.begin();
