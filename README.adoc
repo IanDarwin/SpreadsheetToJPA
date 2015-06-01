@@ -1,0 +1,10 @@
+= Spreadsheet To JPA Entity
+
+This project reads a spreadsheet using Apache POI and writes it into a database using the
+Java Persistence Architecture (JPA).
+
+There is a lot of code that is specific to our particular spreadsheet.
+
+As well, the JPA entity class isn't included as it's in a dependant project, but
+the Member class is pretty obvious, and you probably already have one like it if
+you're needing to convert a spreadsheet into it.
