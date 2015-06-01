@@ -1,11 +1,12 @@
 = Spreadsheet To Database via POI and JPA
 
-This is a rough outline of a project to read a spreadsheet using Apache POI
+This is a rough outline of a quick hack to read a spreadsheet using Apache POI
 and write it into a database using the Java Persistence Architecture (JPA).
 
-There is a lot of code that is specific to our particular spreadsheet.
+There is a lot of code that is specific to our particular spreadsheet and database.
+Please *do not expect this either to compile or work as it stands*.
 
-The persistence.xml file is omitted as it contains my database password and other info.
+The _persistence.xml_ file is omitted as it contains my database password and other info.
 
 As well, the JPA entity class isn't included as it's in a dependant project, but
 the Member class is pretty obvious, and you probably already have one like it if
